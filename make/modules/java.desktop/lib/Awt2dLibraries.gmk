@@ -642,7 +642,7 @@ else # not windows
       JAWT_LIBS += -lawt_xawt
     else
       JAWT_LIBS += -lawt_headless
-      ifeq ($(call isTargetOs, linux), true)
+      ifeq ($(call isTargetOs, linux aix), true)
         JAWT_CFLAGS += -DHEADLESS
       endif
     endif
